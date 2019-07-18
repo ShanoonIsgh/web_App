@@ -5,7 +5,7 @@ app = Flask(__name__)
 items = []
 @app.route('/')
 def index():
-    return render_template('form2.html', items=items)
+    return render_template('index.html', items=items)
 
 @app.route('/add_todo')
 def add_todo():
