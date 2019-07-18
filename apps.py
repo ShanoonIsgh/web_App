@@ -1,6 +1,7 @@
 from flask import *
 import json
 import os
+
 app = Flask(__name__)
 items = []
 @app.route('/')
@@ -10,7 +11,6 @@ def index():
 @app.route('/add_todo')
 def add_todo():
     item = request.args.get('item')
-    print(item)
     items.append(item)
     return redirect("/", code=302)
 
